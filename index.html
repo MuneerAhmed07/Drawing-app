@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App JavaScript</title>
+
+    <!-- custom CSS file link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Tools board -->
+        <section class="tools-board">
+
+            <!-- For Shapes -->
+            <div class="row">
+                <label for="" class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <img src="icons/rectangle.png" alt="rectangle">
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <img src="icons/circle.png" alt="circle">
+                        <span>Circle</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <img src="icons/triangle.png" alt="triangle">
+                        <span>triangle</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill color</label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- For Pencil Art -->
+            <div class="row">
+                <label for="" class="title">Options</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush">
+                        <img src="icons/brush.png" alt="brush">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <img src="icons/eraser.png" alt="eraser">
+                        <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="30" value="5">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- For Color chooser -->
+            <div class="row colors">
+                <label for="" class="title">Colors</label>
+                <ul class="options">
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" id="color-picker" value="#4a98f7">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- For Button  -->
+            <div class="row buttons">
+                <button class="clear-canvas">Clear Canvas</button>
+                <button class="save-img">Save As Image</button>
+            </div>
+
+
+
+        </section>
+
+        <!-- Drawing Board -->
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+
+    </div>
+
+
+
+
+
+
+    <!-- custom Js file link -->
+    <script src="index.js" defer></script>
+    
+</body>
+</html>
